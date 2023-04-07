@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/*import mongoose from "mongoose";
 
 mongoose
   .connect("mongodb://localhost:27017")
@@ -15,4 +15,4 @@ const Message = db.model("Message", {
   date: String,
 });
 
-export { db, Message };
+export { db, Message };*/

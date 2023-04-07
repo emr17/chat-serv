@@ -35,7 +35,7 @@ const config = {
     listenIps: [
       {
         ip: "0.0.0.0",
-        announcedIp: "127.0.0.1",
+        announcedIp: "10.233.201.188",
       },
     ],
     enableUdp: true,
