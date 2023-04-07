@@ -33,10 +33,31 @@ const config = {
   // options for router.createWebRtcTransport (https://mediasoup.org/documentation/v3/mediasoup/api/#WebRtcTransportOptions)
   webRtcTransportOptions: {
     listenIps: [
-      {
-        ip: "0.0.0.0",
-        announcedIp: "10.233.201.188",
-      },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "44.226.145.213",
+  },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "54.187.200.255",
+  },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "34.213.214.55",
+  },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "35.164.95.156",
+  },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "44.230.95.183",
+  },
+  {
+    ip: "0.0.0.0",
+    announcedIp: "44.229.200.200",
+  },
+],
     ],
     enableUdp: true,
     enableTcp: true,
