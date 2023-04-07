@@ -3,7 +3,7 @@ import express from "express";
 const app = express();
 import Cryptr from "cryptr";
 const cryptr = new Cryptr("myTotallySecretKey");
-import { db, Message } from "./mongo-connection.js";
+//import { db, Message } from "./mongo-connection.js";
 
 import https from "httpolyglot";
 import fs from "fs";
@@ -39,7 +39,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/mediasoup/:room/getMessages", (req, res) => {
+/*app.get("/mediasoup/:room/getMessages", (req, res) => {
   var messages;
   console.log("dsfsdfdsf");
   console.log(req.params.room);
@@ -57,7 +57,7 @@ app.get("/mediasoup/:room/getMessages", (req, res) => {
       res.send(messages);
     }
   );
-});
+});*/
 
 const io = new Server(httpsServer);
 
@@ -106,24 +106,7 @@ connections.on("connection", async (socket) => {
     socketId: socket.id,
   });
 
-  socket.on("message", (data) => {
-    socket.join(data.roomName);
-    let dbMessage = new Message({
-      sender: "userName",
-      roomId: data.roomName,
-      message: cryptr.encrypt(data.message),
-    });
-
-    dbMessage
-      .save()
-      .then((res) => console.log("message saved to mongo", res))
-      .catch((err) => console.error("message not saved to mongo", error));
-
-    io.to(data.roomName).emit("createMessage", {
-      message: data.message,
-      userName: "username",
-    });
-  });
+  
 
   const removeItems = (items, socketId, type) => {
     items.forEach((item) => {
