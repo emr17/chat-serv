@@ -57,7 +57,6 @@ const config = {
     ip: "0.0.0.0",
     announcedIp: "44.229.200.200",
   },
-],
     ],
     enableUdp: true,
     enableTcp: true,
