@@ -1,13 +1,13 @@
 const config = {
   // max number of worker processes
-  maxWorkers: 10,
+  maxWorkers: 4,
 
   // port for test application
   appPort: 4000,
 
   // port range for workers
-  rtcMinPort: 10000,
-  rtcMaxPort: 25000,
+  rtcMinPort: 3000,
+  rtcMaxPort: 3800,
   // docker compose seems to have big issues with mapping larger ranges of ports
 
   // options for worker.createRouter (https://mediasoup.org/documentation/v3/mediasoup/api/#RouterOptions)
@@ -35,28 +35,8 @@ const config = {
     listenIps: [
   {
     ip: "0.0.0.0",
-    announcedIp: "44.226.145.213",
-  },
-  {
-    ip: "0.0.0.0",
-    announcedIp: "54.187.200.255",
-  },
-  {
-    ip: "0.0.0.0",
-    announcedIp: "34.213.214.55",
-  },
-  {
-    ip: "0.0.0.0",
-    announcedIp: "35.164.95.156",
-  },
-  {
-    ip: "0.0.0.0",
-    announcedIp: "44.230.95.183",
-  },
-  {
-    ip: "0.0.0.0",
-    announcedIp: "44.229.200.200",
-  },
+    announcedIp: "64.226.111.172",
+  }
     ],
     enableUdp: true,
     enableTcp: true,
@@ -65,8 +45,8 @@ const config = {
 
   // ssl cert info
   ssl: {
-    keyPath: "./server/ssl/key.pem",
-    certPath: "./server/ssl/cert.pem",
+    keyPath: "/etc/letsencrypt/live/sutogachat.site/privkey.pem",
+    certPath: "/etc/letsencrypt/live/sutogachat.site/fullchain.pem",
   },
 };
 
